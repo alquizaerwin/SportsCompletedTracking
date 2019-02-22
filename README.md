@@ -3,7 +3,9 @@
 ## PostgreSQL 11.1
 
 create database database_name character set utf8 collate utf8;
+
 create user database_user identified by 'password';
+
 grant all privileges on database_name.* to database_user;
 
 $ laravel new LaravelAdminUI
@@ -29,6 +31,47 @@ to look like:
 
 $ php artisan make:auth
 $ php artisan migrate
+
+$ php artisan make:model Teams -m
+
+$ nano app/Teams.php
+===========================
+
+class Teams extends Model
+
+{
+    //
+
+    protected $fillable = [
+        'team_name',
+        'team_location',
+        'team_sponsor',
+        'team_arena',
+        'arena_capacity',
+        'year_founded',
+        'year_joined'
+    ];
+}
+
+
+
+$ php artisan make:migration Teams
+$ php artisan make:resource Players
+$ php artisan make:resource PlayerCards
+
+add the following to apps/Http/Resources/Players.php
+
+        return parent::toArray($request);
+        return [
+            'id'         => $this->id,
+            'name'       => $this->name,
+            'position'   => (char) $this->position,
+            'team_name'  => $this->team_name,
+            ''
+        ];
+
+
+
 
 # AngularAdminUX
 

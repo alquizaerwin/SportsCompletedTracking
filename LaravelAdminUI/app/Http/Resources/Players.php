@@ -15,7 +15,7 @@ class Players extends JsonResource
      
     public function toArray($request)
     {   
-        return paren::toArray($request);
+        return parent::toArray($request);
         return [
             'id'         => $this->id,
             'name'       => $this->name,
@@ -24,5 +24,4 @@ class Players extends JsonResource
             ''
         ];
     }
-
 }
