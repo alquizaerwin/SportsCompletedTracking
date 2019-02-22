@@ -2,7 +2,6 @@
 
 ## PostgreSQL 11.1
 
-
 create database database_name character set utf8 collate utf8;
 
 create user database_user identified by 'password';
@@ -71,6 +70,43 @@ add the following to apps/Http/Resources/Players.php
             ''
         ];
 
+and on app/Http/resources/PlayerCards.php:
+
+class PlayersCards extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return parent::toArray($request);
+
+        return [
+            'data' => $this->card,
+        ];
+    }
+}
+
+$ php artisan make:controller PlayerController
+
+$ nano app/Http/Controllers/PlayersController.php
+================================================
+
+
+class PlayersCards extends JsonResource
+{
+    public function toArray($request)
+    {
+        return parent::toArray($request);
+
+        return [
+            'data' => $this->card,
+        ];
+    }
+}
 
 
 
