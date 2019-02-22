@@ -2,6 +2,7 @@
 
 ## PostgreSQL 11.1
 
+
 create database database_name character set utf8 collate utf8;
 
 create user database_user identified by 'password';
