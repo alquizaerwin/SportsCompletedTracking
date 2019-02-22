@@ -30,9 +30,24 @@ to look like:
 'default' => env('DB_CONNECTION', 'pgsql'),
 
 $ php artisan make:auth
-$ php artisan migrate
 
 $ php artisan make:model Teams -m
+
+edit the database/migrations/2019_02_22_012146_create_teams_table.php file:
+
+    public function up()
+    {
+        Schema::create('teams', function (Blueprint $table) {
+            $table->increments('id');
+            $table->char('team_name', 255)->nullable(false);
+            $table->char('team_location', 255)->nullable(false);
+            $table->char('team_sponsor', 255)->nullable();
+            $table->char('team_arena', 255)->nullable();
+            $table->integer('arena_capacity')->unsigned()->nullable();
+            $table->date('year_founded')->nullable(false);
+            $table->date('year_joined')->nullable(false);
+            $table->timestamps();
+        });
 
 $ nano app/Teams.php
 ===========================
@@ -111,6 +126,7 @@ class PlayersCards extends JsonResource
 
 
 # AngularAdminUX
+================================================
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
 
