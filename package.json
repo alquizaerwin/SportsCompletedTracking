@@ -1,0 +1,48 @@
+{
+  "name": "sportsapps",
+  "version": "1.0.0",
+  "description": "Complete SportsApps Package initiated using Node.JS. Complete FullStack with Postgresql backend and MongoDB Express backed with RethinkDB",
+  "main": "index.js",
+  "dependencies": {
+    "@coreui/coreui": "^2.1.6",
+    "bootstrap": "^4.3.1",
+    "d3": "^5.9.1",
+    "jquery": "^3.3.1",
+    "mongodb": "^3.1.13",
+    "perfect-scrollbar": "^1.4.0",
+    "popper.js": "^1.14.7",
+    "rethink": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MongoDB",
+    "RethinkDB",
+    "PostgreSQL",
+    "Laravel-PHP",
+    "Angular",
+    "Flutter",
+    "Dart",
+    "Material-IO",
+    "Bootstrap",
+    "Ionic",
+    "HTML",
+    "Typescript",
+    "CSS",
+    "Python",
+    "and",
+    "Django",
+    "for",
+    "IoS",
+    "FushciaOS",
+    "and",
+    "Android",
+    "OS",
+    "with",
+    "Web."
+  ],
+  "author": "Erwin L. ALQUIZA with Patrick Disini.",
+  "license": "BSD-3"
+}
