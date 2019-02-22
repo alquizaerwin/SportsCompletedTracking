@@ -77,7 +77,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   imports: [BrowserAnimationsModule],
   ...
 })
-export class PizzaPartyAppModule { }
+export class HomeAppModule { }
 
 5.) As alternative syles.scss can be edited to import bulma.min.css.
 6.) ng generate component Home
