@@ -68,7 +68,7 @@ Add to .angular.json:
 + @material/auto-init@0.41.0
 + @material/dom@0.41.0
 
-4.) configure animation module.
+4.) configure animation module. (src/app/)
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -79,7 +79,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 })
 export class HomeAppModule { }
 
-5.) As alternative syles.scss can be edited to import bulma.min.css.
+5.) As alternative syles.scss can be edited to import angular
 6.) ng generate component Home
 7.) ng generate component DataEntry
 
